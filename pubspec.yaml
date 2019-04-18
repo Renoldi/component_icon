@@ -1,0 +1,37 @@
+name: component_icons
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: FontAwesomeLight
+      fonts:
+        - asset: lib/fonts/fa-light-300.ttf
+          weight: 300
+    - family: FontAwesomeBrands
+      fonts:
+        - asset: lib/fonts/fa-brands-400.ttf
+          weight: 400
+    - family: FontAwesomeRegular
+      fonts:
+        - asset: lib/fonts/fa-regular-400.ttf
+          weight: 400
+    - family: FontAwesomeSolid
+      fonts:
+        - asset: lib/fonts/fa-solid-900.ttf
+          weight: 900
