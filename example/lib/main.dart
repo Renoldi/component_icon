@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:component_icons/component_icons.dart';
+import 'package:component_icons/font_awesome.dart';
+import 'package:component_icons/icon_set1.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,19 +41,30 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: 3,
             ),
-            Icon(IconDataBrands(FontAwesomeBrandId.fa_500px)),
+            Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
             SizedBox(
               width: 3,
             ),
-            Icon(IconDataLight(FontAwesomeId.fa_abacus)),
+            Icon(FontAwesomeLight(FontAwesomeId.fa_abacus)),
             SizedBox(
               width: 3,
             ),
-            Icon(IconDataSolid(FontAwesomeId.fa_acorn)),
+            Icon(FontAwesomeSolid(FontAwesomeId.fa_acorn)),
             SizedBox(
               width: 3,
             ),
-            Icon(IconDataRegular(FontAwesomeId.fa_acorn)),
+            Icon(FontAwesomeRegular(FontAwesomeId.fa_acorn)),
+            SizedBox(
+              width: 3,
+            ),
+            Icon(IconSet1(IconSet1Id.job)),
+            SizedBox(
+              width: 3,
+            ),
+            Stack(children: <Widget>[
+              Icon(IconSet1(IconSet1Id.onroad_part_1), color: Colors.blue,),
+              Icon(IconSet1(IconSet1Id.onroead_part_2), color: Colors.red,)
+            ]),
           ],
         ),
       ),

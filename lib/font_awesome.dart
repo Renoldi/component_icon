@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-class IconDataBrands extends IconData {
-  const IconDataBrands(int codePoint)
+class FontAwesomeBrands extends IconData {
+  const FontAwesomeBrands(int codePoint)
       : super(
           codePoint,
           fontFamily: 'FontAwesomeBrands',
@@ -9,8 +9,8 @@ class IconDataBrands extends IconData {
         );
 }
 
-class IconDataSolid extends IconData {
-  const IconDataSolid(int codePoint)
+class FontAwesomeSolid extends IconData {
+  const FontAwesomeSolid(int codePoint)
       : super(
           codePoint,
           fontFamily: 'FontAwesomeSolid',
@@ -18,8 +18,8 @@ class IconDataSolid extends IconData {
         );
 }
 
-class IconDataRegular extends IconData {
-  const IconDataRegular(int codePoint)
+class FontAwesomeRegular extends IconData {
+  const FontAwesomeRegular(int codePoint)
       : super(
           codePoint,
           fontFamily: 'FontAwesomeRegular',
@@ -27,8 +27,8 @@ class IconDataRegular extends IconData {
         );
 }
 
-class IconDataLight extends IconData {
-  const IconDataLight(int codePoint)
+class FontAwesomeLight extends IconData {
+  const FontAwesomeLight(int codePoint)
       : super(
           codePoint,
           fontFamily: 'FontAwesomeLight',

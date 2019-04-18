@@ -36,3 +36,7 @@ flutter:
       fonts:
         - asset: lib/fonts/fa-solid-900.ttf
           weight: 900
+    - family: icon-set1
+      fonts:
+        - asset: lib/fonts/icon-set1.ttf
+          weight: 900
