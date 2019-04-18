@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Component icons'),
     );
   }
 }
@@ -37,9 +37,22 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(Icons.ac_unit),
+            SizedBox(
+              width: 3,
+            ),
             Icon(IconDataBrands(FontAwesomeBrandId.fa_500px)),
+            SizedBox(
+              width: 3,
+            ),
             Icon(IconDataLight(FontAwesomeId.fa_abacus)),
-            Icon(IconDataSolid(FontAwesomeId.fa_acorn))
+            SizedBox(
+              width: 3,
+            ),
+            Icon(IconDataSolid(FontAwesomeId.fa_acorn)),
+            SizedBox(
+              width: 3,
+            ),
+            Icon(IconDataRegular(FontAwesomeId.fa_acorn)),
           ],
         ),
       ),
