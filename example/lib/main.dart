@@ -62,8 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 3,
             ),
             Stack(children: <Widget>[
-              Icon(IconSet1(IconSet1Id.onroad_part_1), color: Colors.blue,),
-              Icon(IconSet1(IconSet1Id.onroead_part_2), color: Colors.red,)
+              Icon(IconSet1(IconSet1Id.onroad_part_1), color: Colors.blue, size: 200,),
+              Icon(IconSet1(IconSet1Id.onroead_part_2), color: Colors.red, size: 200,)
             ]),
           ],
         ),
