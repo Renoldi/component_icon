@@ -14,7 +14,17 @@ class IconSet1Id {
   static const int onroad_part_1 = 0xe901;
   static const int onroead_part_2 = 0xe902;
   static const int job = 0xe900;
-  static const int idling_begin_part_1 = 0x904;
-  static const int idling_begin_part_2 = 0x905;
-  static const int idling_begin_part_3 = 0x906;
+  static const int idling_begin_part_1 = 0xe904;
+  static const int idling_begin_part_2 = 0xe905;
+  static const int idling_begin_part_3 = 0xe906;
+  static const int immobilizer_lock_part_1 = 0xe907;
+  static const int immobilizer_lock_part_2 = 0xe908;
+  static const int immobilizer_lock_part_3 = 0xe909;
+}
+
+class IconSetConfig {
+  int iconSetId;
+  Color color;
+
+  IconSetConfig({this.iconSetId = 0, this.color});
 }
