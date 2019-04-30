@@ -14,4 +14,7 @@ class IconSet1Id {
   static const int onroad_part_1 = 0xe901;
   static const int onroead_part_2 = 0xe902;
   static const int job = 0xe900;
+  static const int idling_begin_part_1 = 0x904;
+  static const int idling_begin_part_2 = 0x905;
+  static const int idling_begin_part_3 = 0x906;
 }

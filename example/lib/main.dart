@@ -33,41 +33,63 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: Wrap(
           children: <Widget>[
-            Icon(Icons.ac_unit),
-            SizedBox(
-              width: 3,
-            ),
-            Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
-            SizedBox(
-              width: 3,
-            ),
-            Icon(FontAwesomeLight(FontAwesomeId.fa_abacus)),
-            SizedBox(
-              width: 3,
-            ),
-            Icon(FontAwesomeSolid(FontAwesomeId.fa_acorn)),
-            SizedBox(
-              width: 3,
-            ),
-            Icon(FontAwesomeRegular(FontAwesomeId.fa_acorn)),
-            SizedBox(
-              width: 3,
-            ),
-            Icon(IconSet1(IconSet1Id.job)),
-            SizedBox(
-              width: 3,
-            ),
-            Stack(children: <Widget>[
-              Icon(IconSet1(IconSet1Id.onroad_part_1), color: Colors.blue, size: 200,),
-              Icon(IconSet1(IconSet1Id.onroead_part_2), color: Colors.red, size: 200,)
-            ]),
+            Divider(),
+            Center(child: Text("font awesome brand")),
+            Divider(),
+            item(
+                child: Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
+                title: "fa_500px"),
+            Divider(),
+            Center(child: Text("font awesome pro (solid/regular/light)")),
+            Divider(),
+            fontAwesomeItem(FontAwesomeId.fa_abacus, "fa_abacus"),
+            fontAwesomeItem(FontAwesomeId.fa_home, "fa_home"),
+            Divider(),
+            Center(child: Text("icon set1")),
+            Divider(),
+            item(
+                child: Stack(children: <Widget>[
+                  Icon(
+                    IconSet1(IconSet1Id.onroad_part_1),
+                    color: Colors.blue,
+                  ),
+                  Icon(
+                    IconSet1(IconSet1Id.onroead_part_2),
+                    color: Colors.red,
+                  )
+                ]),
+                title: "onroad"),
           ],
         ),
       ),
+    );
+  }
+
+  Container item({Widget child, String title}) {
+    return Container(
+        padding: EdgeInsets.all(8),
+        child: Column(
+          children: <Widget>[
+            child,
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Text(title),
+            )
+          ],
+        ));
+  }
+
+  Row fontAwesomeItem(int fontAwesomeId, String title) {
+    return Row(
+      children: <Widget>[
+        item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: title),
+        item(child: Icon(FontAwesomeRegular(fontAwesomeId)), title: title),
+        item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: title),
+      ],
     );
   }
 }
