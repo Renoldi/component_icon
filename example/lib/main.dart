@@ -50,11 +50,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 Divider(),
                 fontAwesomeItem(FontAwesomeId.fa_abacus, "fa_abacus"),
                 fontAwesomeItem(FontAwesomeId.fa_home, "fa_home"),
-                fontAwesomeItem(FontAwesomeId.fa_draw_polygon, "fa_draw_polygon"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_draw_polygon, "fa_draw_polygon"),
                 fontAwesomeItem(FontAwesomeId.fa_route, "fa_route"),
-                fontAwesomeItem(FontAwesomeId.fa_tachometer_slowest, "fa_tachometer_slowest"),
-                fontAwesomeItem(FontAwesomeId.fa_tachometer_slow, "fa_tachometer_slowest"),
-                fontAwesomeItem(FontAwesomeId.fa_tachometer_average, "fa_tachometer_slowest"),
+                fontAwesomeItem(FontAwesomeId.fa_tachometer_slowest,
+                    "fa_tachometer_slowest"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_tachometer_slow, "fa_tachometer_slowest"),
+                fontAwesomeItem(FontAwesomeId.fa_tachometer_average,
+                    "fa_tachometer_slowest"),
+                fontAwesomeItem(FontAwesomeId.fa_route, "fa_route"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_route_highway, "fa_route_highway"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_route_interstate, "fa_route_interstate"),
+                fontAwesomeItem(FontAwesomeId.fa_satellite, "fa_satellite"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_satellite_dish, "fa_satellite_dish"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_thermometer_half, "fa_thermometer_half"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_thermometer_empty, "fa_thermometer_empty"),
+                fontAwesomeItem(
+                    FontAwesomeId.fa_thermometer_full, "fa_thermometer_full"),
+                fontAwesomeItem(FontAwesomeId.fa_bell, "fa_bell"),
+                fontAwesomeItem(FontAwesomeId.fa_bell_school, "fa_bell_school"),
+                fontAwesomeItem(FontAwesomeId.fa_bells, "fa_bells"),
                 Divider(),
                 Center(child: Text("icon set1")),
                 Divider(),
@@ -66,7 +87,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ], title: "onroad"),
                 items(iconSetConfigs: <IconSetConfig>[
                   IconSetConfig(
-                      iconSetId: IconSet1Id.idling_begin_part_1, color: Colors.red),
+                      iconSetId: IconSet1Id.idling_begin_part_1,
+                      color: Colors.red),
                   IconSetConfig(
                       iconSetId: IconSet1Id.idling_begin_part_2,
                       color: Colors.green),
@@ -74,6 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       iconSetId: IconSet1Id.idling_begin_part_3,
                       color: Colors.blue),
                 ], title: "idling_begin"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.mixer_truck)),
+                    title: "mixer_truck"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.engine)),
+                    title: "engine"),
               ],
             ),
           ),
@@ -127,7 +155,9 @@ class _MyHomePageState extends State<MyHomePage> {
         Row(
           children: <Widget>[
             item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: "bold"),
-            item(child: Icon(FontAwesomeRegular(fontAwesomeId)), title: "regular"),
+            item(
+                child: Icon(FontAwesomeRegular(fontAwesomeId)),
+                title: "regular"),
             item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: "light"),
           ],
         ),
