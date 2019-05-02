@@ -102,6 +102,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 item(
                     child: Icon(IconSet1(IconSet1Id.engine)),
                     title: "engine"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.emergency)),
+                    title: "emergency"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.eseal_unlock)),
+                    title: "eseal_unlock"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.geofence)),
+                    title: "geofence"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.route)),
+                    title: "route"),
+                item(
+                    child: Icon(IconSet1(IconSet1Id.ecodriving)),
+                    title: "ecodriving"),
               ],
             ),
           ),
@@ -126,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Container items(
       {List<IconSetConfig> iconSetConfigs,
-      double size = 50,
+      double size = 25,
       String title = "title"}) {
     return item(
         child: Stack(

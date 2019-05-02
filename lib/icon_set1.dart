@@ -18,7 +18,12 @@ class IconSet1Id {
   static const int idling_begin_part_2 = 0xe905;
   static const int idling_begin_part_3 = 0xe906;
   static const int mixer_truck = 0xe907;
+  static const int emergency = 0xe909;
   static const int engine = 0xe910;
+  static const int eseal_unlock = 0xe911;
+  static const int geofence = 0xe912;
+  static const int route = 0xe913;
+  static const int ecodriving = 0xe914;
 }
 
 class IconSetConfig {
