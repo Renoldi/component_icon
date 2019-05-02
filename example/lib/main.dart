@@ -33,40 +33,51 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: Wrap(
-          children: <Widget>[
-            Divider(),
-            Center(child: Text("font awesome brand")),
-            Divider(),
-            item(
-                child: Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
-                title: "fa_500px"),
-            Divider(),
-            Center(child: Text("font awesome pro (solid/regular/light)")),
-            Divider(),
-            fontAwesomeItem(FontAwesomeId.fa_abacus, "fa_abacus"),
-            fontAwesomeItem(FontAwesomeId.fa_home, "fa_home"),
-            Divider(),
-            Center(child: Text("icon set1")),
-            Divider(),
-            items(iconSetConfigs: <IconSetConfig>[
-              IconSetConfig(
-                  iconSetId: IconSet1Id.onroad_part_1, color: Colors.red),
-              IconSetConfig(
-                  iconSetId: IconSet1Id.onroead_part_2, color: Colors.blue),
-            ], title: "onroad", size: 50),
-            items(iconSetConfigs: <IconSetConfig>[
-              IconSetConfig(
-                  iconSetId: IconSet1Id.idling_begin_part_1, color: Colors.red),
-              IconSetConfig(
-                  iconSetId: IconSet1Id.idling_begin_part_2, color: Colors.green),
-              IconSetConfig(
-                  iconSetId: IconSet1Id.idling_begin_part_3, color: Colors.blue),
-            ], title: "onroad", size: 50),
-          ],
-        ),
+      body: ListView(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: Wrap(
+              children: <Widget>[
+                Divider(),
+                Center(child: Text("font awesome brand")),
+                Divider(),
+                item(
+                    child: Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
+                    title: "fa_500px"),
+                Divider(),
+                Center(child: Text("font awesome pro (solid/regular/light)")),
+                Divider(),
+                fontAwesomeItem(FontAwesomeId.fa_abacus, "fa_abacus"),
+                fontAwesomeItem(FontAwesomeId.fa_home, "fa_home"),
+                fontAwesomeItem(FontAwesomeId.fa_draw_polygon, "fa_draw_polygon"),
+                fontAwesomeItem(FontAwesomeId.fa_route, "fa_route"),
+                fontAwesomeItem(FontAwesomeId.fa_tachometer_slowest, "fa_tachometer_slowest"),
+                fontAwesomeItem(FontAwesomeId.fa_tachometer_slow, "fa_tachometer_slowest"),
+                fontAwesomeItem(FontAwesomeId.fa_tachometer_average, "fa_tachometer_slowest"),
+                Divider(),
+                Center(child: Text("icon set1")),
+                Divider(),
+                items(iconSetConfigs: <IconSetConfig>[
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.onroad_part_1, color: Colors.red),
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.onroead_part_2, color: Colors.blue),
+                ], title: "onroad"),
+                items(iconSetConfigs: <IconSetConfig>[
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.idling_begin_part_1, color: Colors.red),
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.idling_begin_part_2,
+                      color: Colors.green),
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.idling_begin_part_3,
+                      color: Colors.blue),
+                ], title: "idling_begin"),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -86,7 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Container items(
-      {List<IconSetConfig> iconSetConfigs, double size, String title}) {
+      {List<IconSetConfig> iconSetConfigs,
+      double size = 50,
+      String title = "title"}) {
     return item(
         child: Stack(
             children: List.generate(iconSetConfigs.length, (index) {
@@ -99,12 +112,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: title);
   }
 
-  Row fontAwesomeItem(int fontAwesomeId, String title) {
-    return Row(
+  Column fontAwesomeItem(int fontAwesomeId, String title) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: title),
-        item(child: Icon(FontAwesomeRegular(fontAwesomeId)), title: title),
-        item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: title),
+        Container(
+          padding: EdgeInsets.only(top: 15),
+          child: Text(
+            title,
+            textAlign: TextAlign.left,
+          ),
+        ),
+        Row(
+          children: <Widget>[
+            item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: "bold"),
+            item(child: Icon(FontAwesomeRegular(fontAwesomeId)), title: "regular"),
+            item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: "light"),
+          ],
+        ),
       ],
     );
   }
