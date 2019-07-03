@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   IconSetConfig(
                       iconSetId: IconSet1Id.pencil_edit_part2,
                       color: Colors.green),
-                ])
+                ],title: "pencil_edit")
               ],
             ),
           ),
