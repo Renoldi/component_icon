@@ -7,6 +7,41 @@ class IconSet1 extends IconData {
           fontFamily: 'icon-set1',
           fontPackage: 'component_icons',
         );
+  
+  static Container item({Widget child, String title}) {
+    return Container(
+        padding: EdgeInsets.all(8),
+        child: Column(
+          children: <Widget>[
+            child,
+            title.isNotEmpty
+                ? Padding(
+                    padding: const EdgeInsets.only(top: 5),
+                    child: Text(title),
+                  )
+                : Container(
+                  width: 0,
+                  height: 0,
+                )
+          ],
+        ));
+  }
+
+  static Container items(
+      {List<IconSetConfig> iconSetConfigs,
+      double size = 25,
+      String title = ""}) {
+    return item(
+        child: Stack(
+            children: List.generate(iconSetConfigs.length, (index) {
+          return Icon(
+            IconSet1(iconSetConfigs[index].iconSetId),
+            color: iconSetConfigs[index].color,
+            size: size,
+          );
+        })),
+        title: title ?? "");
+  }
 }
 
 class IconSet1Id {

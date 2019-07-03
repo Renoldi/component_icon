@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Divider(),
                 Center(child: Text("font awesome brand")),
                 Divider(),
-                item(
+                IconSet1.item(
                     child: Icon(FontAwesomeBrands(FontAwesomeBrandId.fa_500px)),
                     title: "fa_500px"),
                 Divider(),
@@ -79,13 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Divider(),
                 Center(child: Text("icon set1")),
                 Divider(),
-                items(iconSetConfigs: <IconSetConfig>[
+                IconSet1.items(iconSetConfigs: <IconSetConfig>[
                   IconSetConfig(
                       iconSetId: IconSet1Id.onroad_part_1, color: Colors.red),
                   IconSetConfig(
                       iconSetId: IconSet1Id.onroead_part_2, color: Colors.blue),
                 ], title: "onroad"),
-                items(iconSetConfigs: <IconSetConfig>[
+                IconSet1.items(iconSetConfigs: <IconSetConfig>[
                   IconSetConfig(
                       iconSetId: IconSet1Id.idling_begin_part_1,
                       color: Colors.red),
@@ -96,31 +96,31 @@ class _MyHomePageState extends State<MyHomePage> {
                       iconSetId: IconSet1Id.idling_begin_part_3,
                       color: Colors.blue),
                 ], title: "idling_begin"),
-                item(
+                IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.mixer_truck)),
                     title: "mixer_truck"),
-                item(child: Icon(IconSet1(IconSet1Id.engine)), title: "engine"),
-                item(
+                IconSet1.item(child: Icon(IconSet1(IconSet1Id.engine)), title: "engine"),
+                IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.emergency)),
                     title: "emergency"),
-                item(
+                IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.eseal_unlock)),
                     title: "eseal_unlock"),
-                item(
+                IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.geofence)),
                     title: "geofence"),
-                item(child: Icon(IconSet1(IconSet1Id.route)), title: "route"),
-                item(
+                IconSet1.item(child: Icon(IconSet1(IconSet1Id.route)), title: "route"),
+                IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.ecodriving)),
                     title: "ecodriving"),
-                items(iconSetConfigs: <IconSetConfig>[
+                IconSet1.items(iconSetConfigs: <IconSetConfig>[
                   IconSetConfig(
                       iconSetId: IconSet1Id.pencil_edit_part1,
                       color: Colors.red),
                   IconSetConfig(
                       iconSetId: IconSet1Id.pencil_edit_part2,
-                      color: Colors.green),
-                ],title: "pencil_edit")
+                      color: Colors.blue),
+                ], title: "pencil_edit", size: 20)
               ],
             ),
           ),
@@ -129,35 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Container item({Widget child, String title}) {
-    return Container(
-        padding: EdgeInsets.all(8),
-        child: Column(
-          children: <Widget>[
-            child,
-            Padding(
-              padding: const EdgeInsets.only(top: 5),
-              child: Text(title),
-            )
-          ],
-        ));
-  }
-
-  Container items(
-      {List<IconSetConfig> iconSetConfigs,
-      double size = 25,
-      String title = "title"}) {
-    return item(
-        child: Stack(
-            children: List.generate(iconSetConfigs.length, (index) {
-          return Icon(
-            IconSet1(iconSetConfigs[index].iconSetId),
-            color: iconSetConfigs[index].color,
-            size: size,
-          );
-        })),
-        title: title);
-  }
+  
 
   Column fontAwesomeItem(int fontAwesomeId, String title) {
     return Column(
@@ -173,11 +145,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Row(
           children: <Widget>[
-            item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: "bold"),
-            item(
+            IconSet1.item(child: Icon(FontAwesomeSolid(fontAwesomeId)), title: "bold"),
+            IconSet1.item(
                 child: Icon(FontAwesomeRegular(fontAwesomeId)),
                 title: "regular"),
-            item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: "light"),
+            IconSet1.item(child: Icon(FontAwesomeLight(fontAwesomeId)), title: "light"),
           ],
         ),
       ],
