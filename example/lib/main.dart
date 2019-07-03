@@ -99,9 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 item(
                     child: Icon(IconSet1(IconSet1Id.mixer_truck)),
                     title: "mixer_truck"),
-                item(
-                    child: Icon(IconSet1(IconSet1Id.engine)),
-                    title: "engine"),
+                item(child: Icon(IconSet1(IconSet1Id.engine)), title: "engine"),
                 item(
                     child: Icon(IconSet1(IconSet1Id.emergency)),
                     title: "emergency"),
@@ -111,12 +109,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 item(
                     child: Icon(IconSet1(IconSet1Id.geofence)),
                     title: "geofence"),
-                item(
-                    child: Icon(IconSet1(IconSet1Id.route)),
-                    title: "route"),
+                item(child: Icon(IconSet1(IconSet1Id.route)), title: "route"),
                 item(
                     child: Icon(IconSet1(IconSet1Id.ecodriving)),
                     title: "ecodriving"),
+                items(iconSetConfigs: <IconSetConfig>[
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.pencil_edit_part1,
+                      color: Colors.red),
+                  IconSetConfig(
+                      iconSetId: IconSet1Id.pencil_edit_part2,
+                      color: Colors.green),
+                ])
               ],
             ),
           ),

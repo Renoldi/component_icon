@@ -24,6 +24,8 @@ class IconSet1Id {
   static const int geofence = 0xe912;
   static const int route = 0xe913;
   static const int ecodriving = 0xe914;
+  static const int pencil_edit_part1 = 0xe908;
+  static const int pencil_edit_part2 = 0xe90a;
 }
 
 class IconSetConfig {
