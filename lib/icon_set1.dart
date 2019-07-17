@@ -63,6 +63,7 @@ class IconSet1Id {
   static const int pencil_edit_part2 = 0xe90a;
   static const int shipment_done = 0xe90b;
   static const int shipment_process = 0xe90b;
+  static const int user = 0xe90d;
 }
 
 class IconSetConfig {
