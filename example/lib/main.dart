@@ -130,6 +130,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.user)),
                     title: "user"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.key)),
+                    title: "key"),
               ],
             ),
           ),

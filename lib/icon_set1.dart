@@ -7,7 +7,7 @@ class IconSet1 extends IconData {
           fontFamily: 'icon-set1',
           fontPackage: 'component_icons',
         );
-  
+
   static Container item({Widget child, String title}) {
     return Container(
         padding: EdgeInsets.all(8),
@@ -20,9 +20,9 @@ class IconSet1 extends IconData {
                     child: Text(title),
                   )
                 : Container(
-                  width: 0,
-                  height: 0,
-                )
+                    width: 0,
+                    height: 0,
+                  )
           ],
         ));
   }
@@ -64,6 +64,7 @@ class IconSet1Id {
   static const int shipment_done = 0xe90b;
   static const int shipment_process = 0xe90b;
   static const int user = 0xe90d;
+  static const int key = 0xe90e;
 }
 
 class IconSetConfig {
