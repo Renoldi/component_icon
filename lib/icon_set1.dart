@@ -65,6 +65,7 @@ class IconSet1Id {
   static const int shipment_process = 0xe90b;
   static const int user = 0xe90d;
   static const int key = 0xe90e;
+  static const int eye = 0xe90f;
 }
 
 class IconSetConfig {

@@ -131,8 +131,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Icon(IconSet1(IconSet1Id.user)),
                     title: "user"),
                 IconSet1.item(
-                    child: Icon(IconSet1(IconSet1Id.key)),
-                    title: "key"),
+                    child: Icon(IconSet1(IconSet1Id.eye)),
+                    title: "eye"),
               ],
             ),
           ),
