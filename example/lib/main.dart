@@ -120,7 +120,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   IconSetConfig(
                       iconSetId: IconSet1Id.pencil_edit_part2,
                       color: Colors.blue),
-                ], title: "pencil_edit", size: 20)
+                ], title: "pencil_edit", size: 20),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.shipment_done)),
+                    title: "shipment_done"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.shipment_process)),
+                    title: "shipment_process"),
               ],
             ),
           ),
