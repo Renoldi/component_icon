@@ -133,6 +133,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 IconSet1.item(
                     child: Icon(IconSet1(IconSet1Id.eye)),
                     title: "eye"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.arrow)),
+                    title: "arrow"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.box_shipment)),
+                    title: "box_shipment"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.box)),
+                    title: "box"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.headphone)),
+                    title: "headphone"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.steer)),
+                    title: "steer"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.user_alt)),
+                    title: "user_alt"),
+                IconSet1.item(
+                    child: Icon(IconSet1(IconSet1Id.wallet)),
+                    title: "wallet"),
               ],
             ),
           ),

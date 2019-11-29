@@ -66,6 +66,13 @@ class IconSet1Id {
   static const int user = 0xe90d;
   static const int key = 0xe90e;
   static const int eye = 0xe90f;
+  static const int arrow = 0xe915;
+  static const int box_shipment = 0xe916;
+  static const int box = 0xe917;
+  static const int headphone = 0xe953;
+  static const int steer = 0xe954;
+  static const int user_alt = 0xe955;
+  static const int wallet = 0xe956;
 }
 
 class IconSetConfig {
