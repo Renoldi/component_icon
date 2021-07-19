@@ -8,7 +8,7 @@ class IconSet1 extends IconData {
           fontPackage: 'component_icons',
         );
 
-  static Container item({Widget child, String title}) {
+  static Container item({required Widget child, required String title}) {
     return Container(
         padding: EdgeInsets.all(8),
         child: Column(
@@ -27,10 +27,11 @@ class IconSet1 extends IconData {
         ));
   }
 
-  static Container items(
-      {List<IconSetConfig> iconSetConfigs,
-      double size = 25,
-      String title = ""}) {
+  static Container items({
+    required List<IconSetConfig> iconSetConfigs,
+    double size = 25,
+    String title = "",
+  }) {
     return item(
         child: Stack(
             children: List.generate(iconSetConfigs.length, (index) {
@@ -40,7 +41,7 @@ class IconSet1 extends IconData {
             size: size,
           );
         })),
-        title: title ?? "");
+        title: title.isNotEmpty ? title : "");
   }
 }
 
@@ -79,5 +80,5 @@ class IconSetConfig {
   int iconSetId;
   Color color;
 
-  IconSetConfig({this.iconSetId = 0, this.color});
+  IconSetConfig({this.iconSetId = 0, required this.color});
 }
